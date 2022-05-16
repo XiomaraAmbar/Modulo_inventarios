@@ -1,0 +1,52 @@
+
+<style type="text/css">
+	body{
+		background: violet;
+
+	}
+	table{
+		background: white;
+		background-size: 1200px;
+		color: red;
+		border-radius: 5px;
+		font-family: "Arial";
+		padding: 15px 15px 15px 15px;
+		text-decoration: none;
+		font-size: 12px;
+		text-align: center;
+
+	}
+	td{
+		width: 320px;
+	}
+	form{
+		margin-top: 35px;
+		text-align: center;
+	}
+</style>
+<table>
+	<thead>
+		<tr>
+			<td>Codigo</td>
+			<td>Nombre del Producto</td>
+			<td>Stock</td>
+			<td>Descripción</td>
+			<td>Fecha de Expiración</td>
+		</tr>
+	</thead>
+	<tbody>
+		{% for product in products %}
+			<tr>
+				<td>{{ product.0}}</td>
+				<td>{{ product.1}}</td>
+				<td>{{ product.2}}</td>
+				<td>{{ product.3}}</td>
+				<td>{{ product.4}}</td>
+			</tr>
+		{% endfor %}
+	</tbody>
+</table>
+
+<form>
+	<a href="/">Atras</a>
+</form>

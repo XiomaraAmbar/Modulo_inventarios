@@ -1,0 +1,37 @@
+<style type="text/css">
+	body{
+		background: violet;
+
+	}
+	tr{
+		height: 70px;
+
+	}
+	a{
+		background: white;
+		background-size: 1200px;
+		color: red;
+		border-radius: 5px;
+		font-family: "Arial";
+		padding: 15px 15px 15px 15px;
+		text-decoration: none;
+
+	}
+	form{
+		margin-top: 35px;
+		
+	}
+</style>
+<table>
+	<tbody>
+		{% for vcategory in vcategories %}
+			<tr>
+				<td><a href="/view_products_categories/{{vcategory.0}}">{{ vcategory.1}}</a></td>
+				
+			</tr>
+		{% endfor %}
+	</tbody>
+</table>
+<form>
+	<a href="/">Atras</a>
+</form>

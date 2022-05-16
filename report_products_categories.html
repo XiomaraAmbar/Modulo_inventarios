@@ -1,0 +1,50 @@
+<style type="text/css">
+	body{
+		background: violet;
+
+	}
+	table{
+		background: white;
+		color: black;
+		border-radius: 5px;
+		font-family: "Courier New";
+		padding: 15px 15px 15px 15px;
+		text-decoration: none;
+		border-color: green;
+		text-align: center;
+
+	}
+	form{
+		margin-top: 35px;
+
+	}
+	td{
+		width: 250px;
+	}
+</style>
+<table>
+	<thead>
+		<tr>
+			<td>Codigo</td>
+			<td>Nombre del Producto</td>
+			<td>Stock</td>
+			<td>Fecha de Expiración</td>
+			<td>Nombre de Categoría</td>
+
+		</tr>
+	</thead>
+	<tbody>
+		{% for category in categories %}
+			<tr>
+				<td>{{ category.0}}</td>
+				<td>{{ category.1}}</td>
+				<td>{{ category.2}}</td>
+				<td>{{ category.3}}</td>
+				<td>{{ category.4}}</td>
+			</tr>
+		{% endfor %}
+	</tbody>
+</table>
+<form>
+	<a href="/view_categories">Atras</a>
+</form>
